@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+	/**
+	*@author Alejandro Rodriguez Gonzalez
+	*@version 3.0
+	*/
 public class PrecioTrayecto {
 	public static final double PKMMOTO=0.2;
 	public static final double PKMCOCHE=0.28;
@@ -18,15 +22,16 @@ public class PrecioTrayecto {
 			case 2: Coche(); break;
 			case 3: Furgoneta(); break;
 			case 4: Camion(); break;
-
 			}
 			op = menu();
 			
 		}
-		
-		System.out.println("Fin de programa");
-		
+		System.out.println("Fin de programa");	
 	}
+	
+	/**
+	 * @return devuelve la opcion elegida
+	 */
 	public static  int menu()
 	{
 		Scanner sc = new Scanner(System.in);
@@ -44,27 +49,16 @@ public class PrecioTrayecto {
 		return op;
 	}
 	
-	public static double kilometros() {
-		System.out.println("Escriba la distancia en Kilómetros");
-		Scanner sc = new Scanner(System.in);
-		double km = sc.nextDouble();
-		return km;
-	}
-	
-	public static void mostrar(double p) {
-		System.out.println("El coste del trayecto sería de: "+String.format("%.2f", p)+" euros");
-	}
-	
 	public static void Moto() {
-		mostrar(PKMMOTO*kilometros());
+		mostrar.m(PKMMOTO*kilometros.pedir());
 	}
 	public static void Coche() {
-		mostrar(PKMCOCHE*kilometros());
+		mostrar.m(PKMCOCHE*kilometros.pedir());
 	}
 	public static void Furgoneta() {
-		mostrar(PKMFURGONETA*kilometros());
+		mostrar.m(PKMFURGONETA*kilometros.pedir());
 	}
 	public static void Camion() {
-		mostrar(PKMCAMION*kilometros());
+		mostrar.m(PKMCAMION*kilometros.pedir());
 	}	
 }
